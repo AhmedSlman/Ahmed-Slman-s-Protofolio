@@ -40,7 +40,7 @@ const Hero = () => {
               <div className="w-48 h-48 md:w-60 md:h-60 rounded-full bg-space-accent/20 backdrop-blur-3xl animate-pulse delay-100 absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
               
               <img 
-                src="https://placehold.co/600x600/1a1f2c/9b87f5?text=👨‍💻" 
+                src="/lovable-uploads/91241d1f-97fb-4776-acbd-fc7fa9d6c264.png" 
                 alt="Ahmed Moustafa - Flutter Developer"
                 className="w-60 h-60 md:w-72 md:h-72 object-cover rounded-full border-4 border-space-purple/50 shadow-lg shadow-space-purple/30 animate-float z-20"
               />

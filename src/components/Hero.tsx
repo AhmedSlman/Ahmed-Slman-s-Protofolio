@@ -17,11 +17,11 @@ const Hero = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in text-glow">
-              Building the <span className="text-gradient">future</span> with Flutter
+              Ahmed <span className="text-gradient">Moustafa</span> Ali
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 animate-fade-in max-w-lg">
-              Passionate about crafting innovative cross-platform applications that push the boundaries of what's possible
+              Junior Flutter Developer with 2+ years of experience, specializing in cross-platform app development and responsive UI design
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-fade-in">
@@ -41,7 +41,7 @@ const Hero = () => {
               
               <img 
                 src="https://placehold.co/600x600/1a1f2c/9b87f5?text=👨‍💻" 
-                alt="Flutter Developer"
+                alt="Ahmed Moustafa - Flutter Developer"
                 className="w-60 h-60 md:w-72 md:h-72 object-cover rounded-full border-4 border-space-purple/50 shadow-lg shadow-space-purple/30 animate-float z-20"
               />
               

@@ -1,15 +1,34 @@
 
-import { Check, Code, Database, GitBranch, LayoutTemplate, Rocket, Server, Smartphone } from 'lucide-react';
+import { Check, Code, Database, GitBranch, LayoutTemplate, Rocket, Server, Smartphone, Globe, Briefcase } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const About = () => {
   const skills = [
     { name: "Flutter", icon: Smartphone, level: 90 },
-    { name: "Dart", icon: Code, level: 85 },
-    { name: "Firebase", icon: Database, level: 80 },
-    { name: "REST API", icon: Server, level: 75 },
-    { name: "Git", icon: GitBranch, level: 70 },
-    { name: "UI/UX Design", icon: LayoutTemplate, level: 65 },
+    { name: "Dart", icon: Code, level: 88 },
+    { name: "Firebase", icon: Database, level: 85 },
+    { name: "REST API", icon: Server, level: 82 },
+    { name: "MVVM/BLoC/Cubit", icon: Code, level: 85 },
+    { name: "Git & GitHub", icon: GitBranch, level: 80 },
+    { name: "UI/UX Design", icon: LayoutTemplate, level: 75 },
+    { name: "Supabase", icon: Database, level: 70 },
+  ];
+
+  const experiences = [
+    {
+      title: "Junior Flutter Developer",
+      company: "Fourth Pyramid",
+      period: "Present",
+      location: "Mansoura, Egypt",
+      description: "Developing cross-platform mobile apps using Flutter, collaborating with teams to write clean, reusable code, and integrating third-party APIs."
+    },
+    {
+      title: "Freelance Flutter Developer & Founder",
+      company: "Nexus Agency",
+      period: "Present",
+      location: "Remote",
+      description: "Founder of Nuxes, a freelance team specializing in Flutter mobile app development. Managing projects, assigning tasks, and ensuring high-quality delivery."
+    }
   ];
 
   return (
@@ -22,17 +41,18 @@ const About = () => {
           <div className="w-20 h-1 bg-space-purple mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div className="space-y-6 order-2 lg:order-1">
             <p className="text-lg text-gray-300">
-              I'm a Flutter Developer with over a year of experience specializing in 
-              cross-platform app development. My journey in the tech world is driven by 
-              a passion for creating innovative solutions that solve real-world problems.
+              I'm a Junior Flutter Developer with over two years of experience specializing in 
+              cross-platform app development. My passion lies in creating innovative solutions 
+              that solve real-world problems through beautiful, responsive interfaces.
             </p>
             
             <p className="text-lg text-gray-300">
-              I hold a Machine Learning certificate from NTI and continuously expand my 
-              knowledge to stay at the forefront of mobile development technologies and best practices.
+              Based in Mansoura, Egypt, I'm currently working with Fourth Pyramid and running my
+              own freelance team (Nuxes) to deliver high-quality mobile applications. I hold a 
+              Bachelor's Degree in Software Engineering from Mansoura University.
             </p>
 
             <div className="bg-space-blue/40 p-6 rounded-lg border border-space-purple/20 mt-8">
@@ -44,25 +64,46 @@ const About = () => {
                 </li>
                 <li className="flex items-center text-gray-300">
                   <Check size={18} className="text-space-accent mr-2" />
-                  MVVM Architecture for scalable applications
+                  State Management (MVVM, BLoC, Cubit) for scalable apps
                 </li>
                 <li className="flex items-center text-gray-300">
                   <Check size={18} className="text-space-accent mr-2" />
-                  Firebase integration for backend solutions
+                  Firebase & Supabase for backend solutions
                 </li>
                 <li className="flex items-center text-gray-300">
                   <Check size={18} className="text-space-accent mr-2" />
-                  REST API integration for data-rich applications
+                  REST API integration & Google Maps implementation
                 </li>
                 <li className="flex items-center text-gray-300">
                   <Check size={18} className="text-space-accent mr-2" />
-                  Performance optimization for seamless user experience
+                  Payment gateway integration & responsive UI design
                 </li>
                 <li className="flex items-center text-gray-300">
                   <Check size={18} className="text-space-accent mr-2" />
-                  SharedPreferences for efficient local storage
+                  Performance optimization & app publishing
                 </li>
               </ul>
+            </div>
+            
+            <div className="mt-8">
+              <h3 className="text-xl font-semibold mb-4 text-gradient">Work Experience</h3>
+              {experiences.map((experience, index) => (
+                <Card key={index} className="glass-card mb-4 border-space-purple/20">
+                  <CardContent className="p-6">
+                    <div className="flex items-start">
+                      <Briefcase size={24} className="text-space-accent mr-3 mt-1" />
+                      <div>
+                        <div className="flex flex-wrap justify-between items-start">
+                          <h4 className="text-lg font-semibold">{experience.title}</h4>
+                          <span className="text-sm text-gray-400">{experience.period}</span>
+                        </div>
+                        <p className="text-gray-400">{experience.company} | {experience.location}</p>
+                        <p className="text-gray-500 text-sm mt-2">{experience.description}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
 
@@ -96,8 +137,38 @@ const About = () => {
                       <h4 className="text-lg font-semibold mb-2">Machine Learning Certificate</h4>
                       <p className="text-gray-400">National Telecommunications Institute (NTI)</p>
                       <p className="text-gray-500 text-sm mt-1">
-                        Completed comprehensive training in machine learning algorithms, data analysis, 
+                        Comprehensive training in machine learning algorithms, data analysis, 
                         and implementation techniques for intelligent applications.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="glass-card mt-4 border-space-purple/20">
+                <CardContent className="p-6">
+                  <div className="flex items-start">
+                    <Globe size={24} className="text-space-accent mr-3 mt-1" />
+                    <div>
+                      <h4 className="text-lg font-semibold mb-2">Education</h4>
+                      <p className="text-gray-400">Bachelor's Degree in Software Engineering</p>
+                      <p className="text-gray-500 text-sm">
+                        Faculty of Computer & Information Sciences, Mansoura University (2020 – 2024)
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="glass-card mt-4 border-space-purple/20">
+                <CardContent className="p-6">
+                  <div className="flex items-start">
+                    <Code size={24} className="text-space-accent mr-3 mt-1" />
+                    <div>
+                      <h4 className="text-lg font-semibold mb-2">Additional Certification</h4>
+                      <p className="text-gray-400">Mobile App Development with Flutter</p>
+                      <p className="text-gray-500 text-sm">
+                        Consulting of Computers and Information Center (CCIC)
                       </p>
                     </div>
                   </div>
